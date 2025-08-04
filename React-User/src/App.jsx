@@ -8,7 +8,7 @@ function App() {
       {
         Users.map(user=>{
           
-         return <Display name={user.name} email={user.email}/>
+        return<Display  key={user.id} name={user.name} email={user.email}/>
         
 })
       }
