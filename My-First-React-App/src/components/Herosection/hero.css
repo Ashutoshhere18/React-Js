@@ -1,0 +1,19 @@
+/* 
+.image{
+ background-image: url('');
+} */
+
+.image {
+  width: 100%;
+  height: 600px;
+  background-image: url('https://www.hdwallpapers.in/download/paris_eiffel_tower_with_red_lights_with_background_of_dark_sky_4k_hd_travel-HD.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed ;
+   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.4);
+ 
+}
