@@ -1,12 +1,51 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React User Display App
 
-Currently, two official plugins are available:
+This is a simple React.js project that displays a list of users with their names and emails using a reusable component.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+
+├── src
+│   ├── assets
+│   │   └── UserData.js       # JSON data of users
+│   ├── components
+│   │   └── Display.jsx       # Reusable component to show user info
+│   ├── App.jsx               # Main app logic with map()
+│   └── App.css               # Styling
+
+````
+
+---
+
+## 🚀 Features
+
+- Display user data using a map function
+- Uses a reusable `Display` component
+- Shows user name and email
+- Organized and clean component structure
+
+---
+
+## 📸 Screenshot
+
+> <img width="531" height="680" alt="Screenshot 2025-08-04 214624" src="https://github.com/user-attachments/assets/514f5311-13f5-49be-8235-55c3c4ea09c2" />
+
+
+
+---
+
+
+
+## 📦 Dependencies
+
+* React
+* Vite (or Create React App if used)
+* Node.js
+
+---
+
+
