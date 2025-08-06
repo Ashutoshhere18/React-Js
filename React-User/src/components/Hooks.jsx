@@ -15,7 +15,12 @@ export default function Counter() {
 
     const mul=()=>{
       let temp=count;
-      temp*2;
+      temp*=2;
+      Setcount(temp);
+    }
+    const Div=()=>{
+      let temp=count;
+      temp/=2;
       Setcount(temp);
     }
   return (
@@ -23,7 +28,8 @@ export default function Counter() {
       <h3>{count}</h3>
       <button onClick={add}>++</button>
       <button onClick={sub}>--</button>
-      <button onClick={mul}>2X</button>
+      <button onClick={mul}> 2 x</button>
+      <button onClick={Div}>/ 2</button>
     </div>
   )
 }
