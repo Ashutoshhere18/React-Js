@@ -9,6 +9,10 @@ This project demonstrates **React Hooks**, clean component structure, and a full
 ## 🎥 Demo
 
 
+https://github.com/user-attachments/assets/ca78a740-6a49-45da-a9fd-3fbfbbffc906
+
+
+
 ---
 
 ## ✨ Features
@@ -23,6 +27,7 @@ This project demonstrates **React Hooks**, clean component structure, and a full
 ---
 
 ## 🖼 Preview
+<img width="579" height="385" alt="Screenshot 2025-08-08 112306" src="https://github.com/user-attachments/assets/f3f66e3b-611b-4cbb-ab94-177b28b8810b" />
 
 
 
