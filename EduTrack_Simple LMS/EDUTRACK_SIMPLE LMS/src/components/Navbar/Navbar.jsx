@@ -1,22 +1,19 @@
-// src/components/Navbar.jsx
 import React from "react";
 import "./Navbar.css";
 
-const Navbar = ({ setPage }) => {
+const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
-        EduTrack <span className="highlight">LMS</span>
-      </div>
-
-      <ul className="navbar-links">
-        <li onClick={() => setPage("dashboard")}>Dashboard</li>
-        <li onClick={() => setPage("courses")}>Courses</li>
-        <li onClick={() => setPage("students")}>Students</li>
-        <li onClick={() => setPage("categories")}>Categories</li>
+      <div className="logo">LMS Course Manager</div>
+      <ul className="nav-links">
+        <li>Home</li>
+        <li>Courses</li>
+        <li>About</li>
+        <li>Contact</li>
       </ul>
     </nav>
   );
 };
 
 export default Navbar;
+
