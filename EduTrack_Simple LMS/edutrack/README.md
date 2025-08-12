@@ -41,6 +41,10 @@ This project is designed for modern web learners who want a **clean UI + functio
 ## 📸 Demo
 
 
+https://github.com/user-attachments/assets/4793dafc-9f46-40a9-8b28-c41b7c0941cf
+
+
+
 
 ---
 
