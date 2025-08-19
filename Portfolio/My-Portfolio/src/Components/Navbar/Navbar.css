@@ -1,0 +1,101 @@
+
+.Nav-section{
+    background-color: rgb(202, 192, 192);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+.Navbar-content a{
+    margin-left: 20px;
+    
+}
+.Navbar-content{
+    margin-right: 10px;
+}
+
+
+
+
+
+
+/* Brand container */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 10px;
+}
+
+/* AT box */
+.logo-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 2px solid #4f46e5;   /* Indigo border */
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #4f46e5;
+  transition: all 0.3s ease;
+}
+
+/* Wordmark text */
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -0.5px;
+}
+
+/* Apostrophe lighter */
+.logo-apostrophe {
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+/* Stylish Portfolio */
+.logo-portfolio {
+  font-weight: 600;
+  margin-left: 6px;
+  font-style: italic;
+  position: relative;
+  background: linear-gradient(90deg, #4f46e5, #9333ea); /* Indigo → Purple */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Underline effect */
+.logo-portfolio::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #4f46e5, #9333ea);
+  border-radius: 2px;
+  transition: transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+/* Animate underline on hover */
+.brand:hover .logo-portfolio::after {
+  transform: scaleX(1);
+}
+
+/* Hover AT box */
+.brand:hover .logo-box {
+  background: #4f46e5;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+}
