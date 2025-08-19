@@ -12,6 +12,8 @@
 
 .Navbar-content a{
     margin-left: 20px;
+    text-decoration: none;
+    list-style: none;
     
 }
 .Navbar-content{
