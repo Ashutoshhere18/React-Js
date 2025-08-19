@@ -5,13 +5,14 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  /* padding: 15px 40px; */
-  /* box-shadow: 0 2px 6px rgba(0,0,0,0.1); */
+  height: 50px;
+ 
 }
 .Navbar-content a {
   color: #333;
   text-decoration: none;
   margin-left: 20px;
+  font-weight: bold;
   
 }
 .Navbar-content a:hover {
@@ -21,10 +22,6 @@
 
 
 
-
-
-
-/* Brand container */
 .brand {
   display: inline-flex;
   align-items: center;
@@ -34,14 +31,14 @@
   margin-left: 10px;
 }
 
-/* AT box */
+
 .logo-box {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 42px;
   height: 42px;
-  border: 2px solid #4f46e5;   /* Indigo border */
+  border: 2px solid #4f46e5;   
   border-radius: 12px;
   font-weight: 700;
   font-size: 16px;
@@ -49,7 +46,7 @@
   transition: all 0.3s ease;
 }
 
-/* Wordmark text */
+
 .logo-text {
   font-size: 20px;
   font-weight: 700;
@@ -57,24 +54,23 @@
   letter-spacing: -0.5px;
 }
 
-/* Apostrophe lighter */
+
 .logo-apostrophe {
   opacity: 0.7;
   font-weight: 500;
 }
 
-/* Stylish Portfolio */
+
 .logo-portfolio {
   font-weight: 600;
   margin-left: 6px;
   font-style: italic;
   position: relative;
-  background: linear-gradient(90deg, #4f46e5, #9333ea); /* Indigo → Purple */
+  background: linear-gradient(90deg, #4f46e5, #9333ea); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Underline effect */
 .logo-portfolio::after {
   content: "";
   position: absolute;
@@ -89,12 +85,11 @@
   transform-origin: left;
 }
 
-/* Animate underline on hover */
 .brand:hover .logo-portfolio::after {
   transform: scaleX(1);
 }
 
-/* Hover AT box */
+
 .brand:hover .logo-box {
   background: #4f46e5;
   color: #fff;
