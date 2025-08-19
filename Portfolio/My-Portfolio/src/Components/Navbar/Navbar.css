@@ -1,24 +1,23 @@
-
-.Nav-section{
-    background-color: rgb(202, 192, 192);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+.Nav-section {
+  background-color: #fff;
+  color: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* padding: 15px 40px; */
+  /* box-shadow: 0 2px 6px rgba(0,0,0,0.1); */
+}
+.Navbar-content a {
+  color: #333;
+  text-decoration: none;
+  margin-left: 20px;
+  
+}
+.Navbar-content a:hover {
+  color: #4f46e5;
 }
 
-
-
-.Navbar-content a{
-    margin-left: 20px;
-    text-decoration: none;
-    list-style: none;
-    
-}
-.Navbar-content{
-    margin-right: 10px;
-}
 
 
 

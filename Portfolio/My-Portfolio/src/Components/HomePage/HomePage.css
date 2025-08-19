@@ -1,0 +1,78 @@
+.Home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  min-height: 100vh;
+  background: #111;
+  color: #fff;
+}
+
+.home-content {
+  max-width: 600px;
+}
+
+.Home h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.Home h1 {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.Home h1 .highlight {
+  color: #4f46e5; /* Indigo */
+}
+
+.Home h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.Home p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #4338ca;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid #4f46e5;
+  color: #4f46e5;
+}
+
+.btn.secondary:hover {
+  background: #4f46e5;
+  color: #fff;
+}
+
+.home-image img {
+  max-width: 300px;
+  border-radius: 50%;
+  border: 3px solid #4f46e5;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
