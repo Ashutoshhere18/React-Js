@@ -15,11 +15,11 @@ export default function HomePage(props) {
          {location}
         </p>
         <div class="buttons">
-          <a href="#projects" class="btn">
+          <a href="https://github.com/Ashutoshhere18" class="btn">
             View Projects
           </a>
-          <a href="#contact" class="btn secondary">
-            Contact Me
+          <a href="https://www.linkedin.com/in/ashutosh-mishra-26633334b" class="btn secondary">
+            Hire me
           </a>
         </div>
       </div>
