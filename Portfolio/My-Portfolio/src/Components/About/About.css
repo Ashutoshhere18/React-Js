@@ -1,0 +1,76 @@
+
+.Maindiv {
+  min-height: 500px;
+  /* width: 100%; */
+  background-color: #111;
+  color: #f5f5f5;
+  padding: 60px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+.Maindiv::before {
+  content: "About Me";
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4f46e5; 
+  margin-bottom: 40px;
+  display: block;
+}
+
+
+.repo {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-left: 4px solid #4f46e5; 
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 80%;
+  max-width: 800px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.repo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+}
+
+
+.Name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f5f5f5;
+  margin: 0;
+}
+
+
+.repo button {
+  background-color: #4f46e5;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.repo button:hover {
+  background-color: #6d5dfc;
+  transform: scale(1.05);
+}
+
+
+.repo button a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
