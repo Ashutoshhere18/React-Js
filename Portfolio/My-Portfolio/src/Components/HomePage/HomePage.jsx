@@ -3,6 +3,7 @@ import "./HomePage.css";
 export default function HomePage(props) {
 
   const{bio,avatar_url,name,location}=props.Data
+
   return (
     <section className="Home">
       <div class="home-content">
@@ -14,6 +15,7 @@ export default function HomePage(props) {
         <p>
          {location}
         </p>
+       
         <div class="buttons">
           <a href="https://github.com/Ashutoshhere18" class="btn">
             View Projects
