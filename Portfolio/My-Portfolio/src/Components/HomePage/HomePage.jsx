@@ -2,19 +2,17 @@ import React from "react";
 import "./HomePage.css";
 export default function HomePage(props) {
 
-  const{bio,avatar_url}=props.Data
+  const{bio,avatar_url,name,location}=props.Data
   return (
     <section className="Home">
       <div class="home-content">
         <h3>Hello, I'm</h3>
         <h1>
-          <span class="highlight">Ashutosh Mishra</span>
+          <span class="highlight">{name}</span>
         </h1>
         <h2>{bio} </h2>
         <p>
-          Passionate about building modern, responsive, and user-friendly web
-          applications. Currently learning React and full-stack development to
-          create impactful digital solutions.
+         {location}
         </p>
         <div class="buttons">
           <a href="#projects" class="btn">
