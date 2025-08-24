@@ -1,12 +1,81 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🚀 My Portfolio Website 🌌
 
-Currently, two official plugins are available:
+✨ A modern, premium-styled **personal portfolio website** built with **React**.
+Showcasing my journey, skills, and projects as a **Full-Stack Developer** 👨‍💻.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📸 Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+---
+
+## 🛠️ Tech Stack
+
+* ⚛️ **React.js** – Frontend Framework
+* 🎨 **CSS3 (Custom Premium Dark Theme)** – Styling
+* 🌐 **HTML5** – Markup
+* 🚀 **Netlify / Vercel** – Deployment *(or whichever you used)*
+
+---
+
+## ✨ Features
+
+🔹 **Responsive Design** – Smooth experience on all devices 📱💻
+🔹 **Dark Premium UI** – Sleek gradient touches 🌌
+🔹 **Animated Navbar** – Premium hover and sticky navigation 🧭
+🔹 **Contact Form** – Input fields & button with glowing effects 📧
+🔹 **Projects Showcase** – GitHub repos with live links 📂
+
+---
+
+## 📂 Project Structure
+
+```
+Portfolio/
+│── public/
+│── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── About.jsx
+│   │   ├── Contact.jsx
+│   │   └── ...
+│   ├── styles/
+│   │   ├── Navbar.css
+│   │   ├── About.css
+│   │   ├── Contact.css
+│   │   └── ...
+│   ├── App.js
+│   └── index.js
+│── package.json
+└── README.md
+```
+
+---
+
+## 📬 Contact Me
+
+💻 GitHub: [Ashutoshhere18](https://github.com/Ashutoshhere18)  
+
+🔗 LinkedIn: [Ashutosh Mishra](https://www.linkedin.com/in/ashutosh-mishra-26633334b/)  
+
+📧 Email: [mishraashutoshwk@gmail.com](mailto:mishraashutoshwk@gmail.com)  
+
+📱 Portfolio: [Coming Soon 🚀]  
+
+---
+
+## ⭐ Acknowledgements
+
+Thanks for checking out my portfolio 🙏
+If you like this project, consider **starring it** ⭐ on GitHub.
+
+---
+
+💜 *Designed & Developed with Passion by **Ashutosh Mishra***
+
+---
+
+
