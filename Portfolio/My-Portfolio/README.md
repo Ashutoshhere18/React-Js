@@ -9,6 +9,10 @@ Showcasing my journey, skills, and projects as a **Full-Stack Developer** 👨�
 ## 📸 Preview
 
 
+https://github.com/user-attachments/assets/d9f9bba2-57ae-43e5-a99a-162511363e03
+
+
+
 
 ---
 
