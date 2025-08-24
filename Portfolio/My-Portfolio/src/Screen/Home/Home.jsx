@@ -3,6 +3,7 @@ import Navbar from '..//../Components/Navbar/Navbar'
 import HomePage from '../../Components/HomePage/HomePage'
 import About from '../../Components/About/About'
 import axios from 'axios'
+import Contact from '../../Components/Contact/contact'
 export default function Home() {
 
 
@@ -27,6 +28,7 @@ const FetchRepos=async()=>{
       <Navbar/>
       <HomePage Data={GithubData}/>
       <About Data={Repos}/>
+      <Contact/>
     </div>
   )
 }

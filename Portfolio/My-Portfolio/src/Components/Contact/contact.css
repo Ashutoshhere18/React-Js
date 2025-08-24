@@ -1,0 +1,70 @@
+
+.contact-div {
+  background: #0f0f1a; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact {
+  background: linear-gradient(135deg, #1c1c2b, #111122);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.contact:hover {
+  transform: translateY(-5px);
+}
+
+.contact h2 {
+  color: #fff;
+  font-size: 26px;
+  margin-bottom: 25px;
+  background: linear-gradient(90deg, #4f46e5, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background: #1e1e2f;
+  color: #eee;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.contact input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 10px rgba(79, 70, 229, 0.4);
+  outline: none;
+}
+
+.contact button {
+  margin-top: 15px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #4f46e5, #9333ea);
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact button:hover {
+  background: linear-gradient(90deg, #9333ea, #4f46e5);
+  box-shadow: 0 6px 15px rgba(147, 51, 234, 0.4);
+  transform: scale(1.05);
+}
