@@ -28,10 +28,10 @@ export default function Contact() {
     <div className="contact-div">
       <div className="contact">
         <h2>Contact Form</h2>
-        <input type="text"  value={user.name} onChange={handleInput} placeholder="Enter your name" />
-        <input type="email"  value={user.email} onChange={handleInput}  placeholder="example@mail.com"  />
-        <input type="tel" value={user.phone} onChange={handleInput} placeholder="Enter your mobile no."  />
-        <input type="text"  value={user.idea} onChange={handleInput}  placeholder="Enter your idea.." />
+        <input type="text"  value={user.name} name="name" onChange={handleInput} placeholder="Enter your name" />
+        <input type="email"  value={user.email} name="email" onChange={handleInput}  placeholder="example@mail.com"  />
+        <input type="tel" value={user.phone} name="phone" onChange={handleInput} placeholder="Enter your mobile no."  />
+        <input type="text"  value={user.idea} name="idea" onChange={handleInput}  placeholder="Enter your idea.." />
         <button onClick={handleSubmit}>Submit</button>
       </div>
       <div className="display">
