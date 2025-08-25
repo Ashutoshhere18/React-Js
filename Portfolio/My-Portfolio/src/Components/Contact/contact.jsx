@@ -1,24 +1,44 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./Contact.css";
 
 export default function Contact() {
-  const email = useRef(null);
-  const phone = useRef(null);
+ 
+  const [user,Setuser]=useState({
+    name:"",
+    email:"",
+    phone:"",
+    idea:""
+  })
 
   const handleSubmit = () => {
-    console.log("Email:", email.current.value);
-    console.log("Phone:", phone.current.value);
+   console.log(user);
   };
 
+ 
+  const handleInput=(e)=>{
+     const key=e.target.name;
+     const value=e.target.value;
+
+     const temp={...user};
+     temp[key]=value;
+
+     Setuser(temp);
+  }
   return (
     <div className="contact-div">
       <div className="contact">
         <h2>Contact Form</h2>
-        <input type="text" placeholder="Enter your name" />
-        <input type="email" placeholder="example@mail.com" ref={email} />
-        <input type="tel" placeholder="Enter your mobile no." ref={phone} />
-        <input type="text" placeholder="Enter your idea.." />
+        <input type="text"  value={user.name} onChange={handleInput} placeholder="Enter your name" />
+        <input type="email"  value={user.email} onChange={handleInput}  placeholder="example@mail.com"  />
+        <input type="tel" value={user.phone} onChange={handleInput} placeholder="Enter your mobile no."  />
+        <input type="text"  value={user.idea} onChange={handleInput}  placeholder="Enter your idea.." />
         <button onClick={handleSubmit}>Submit</button>
+      </div>
+      <div className="display">
+        <p>Name :{user.name}</p>
+        <p> Email:{user.email}</p>
+        <p>Phone No: {user.phone}</p>
+        <p>Idea:{user.idea}</p>
       </div>
     </div>
   );
