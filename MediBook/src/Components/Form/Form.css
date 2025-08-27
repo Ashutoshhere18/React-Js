@@ -1,0 +1,104 @@
+/* Background for page */
+.form-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://images.unsplash.com/photo-1588776814546-0e7c81c5e4a6") no-repeat center center/cover;
+  backdrop-filter: blur(5px);
+  padding: 20px;
+}
+
+/* Glass effect form card */
+.appointment-form {
+  width: 100%;
+  max-width: 650px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.75); /* transparent white */
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Section headings */
+.appointment-form h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  color: #004080; /* hospital blue */
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 5px;
+}
+
+/* Labels */
+.appointment-form label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Inputs */
+.appointment-form input[type="text"],
+.appointment-form input[type="number"],
+.appointment-form input[type="tel"],
+.appointment-form input[type="email"],
+.appointment-form input[type="date"],
+.appointment-form input[type="time"],
+.appointment-form select,
+.appointment-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  background: rgba(255,255,255,0.9);
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.appointment-form input:focus,
+.appointment-form select:focus,
+.appointment-form textarea:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 6px rgba(26, 115, 232, 0.4);
+}
+
+/* Radio and Checkbox */
+.radio-group {
+  margin: 8px 0;
+}
+
+.appointment-form label.inline {
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: normal;
+  color: #444;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Button */
+.appointment-form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #1a73e8, #155ab6);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.appointment-form button:hover {
+  background: linear-gradient(135deg, #155ab6, #0d3c91);
+}
