@@ -1,104 +1,124 @@
-/* Background for page */
+/* Wrapper: holds form and summary side by side */
 .form-wrapper {
-  min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background: url("https://images.unsplash.com/photo-1588776814546-0e7c81c5e4a6") no-repeat center center/cover;
-  backdrop-filter: blur(5px);
-  padding: 20px;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+  background: linear-gradient(to right, #f0f4f8, #d9e9f7);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Glass effect form card */
+/* Appointment Form */
 .appointment-form {
-  width: 100%;
-  max-width: 650px;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.75); /* transparent white */
-  backdrop-filter: blur(15px);
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  font-family: "Segoe UI", sans-serif;
+  flex: 1;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.8); /* glass effect */
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 25px 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Section headings */
 .appointment-form h3 {
-  margin-bottom: 12px;
-  font-size: 20px;
-  color: #004080; /* hospital blue */
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 15px;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  display: inline-block;
   padding-bottom: 5px;
 }
 
-/* Labels */
 .appointment-form label {
   display: block;
-  margin: 12px 0 5px;
-  font-weight: 500;
-  color: #333;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #34495e;
 }
 
-/* Inputs */
-.appointment-form input[type="text"],
-.appointment-form input[type="number"],
-.appointment-form input[type="tel"],
-.appointment-form input[type="email"],
-.appointment-form input[type="date"],
-.appointment-form input[type="time"],
+.appointment-form input,
 .appointment-form select,
 .appointment-form textarea {
   width: 100%;
   padding: 10px 12px;
-  border: 1px solid #ddd;
+  margin-top: 5px;
+  border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 15px;
   outline: none;
-  background: rgba(255,255,255,0.9);
-  transition: border 0.3s, box-shadow 0.3s;
+  transition: 0.2s;
 }
 
 .appointment-form input:focus,
 .appointment-form select:focus,
 .appointment-form textarea:focus {
-  border-color: #1a73e8;
-  box-shadow: 0 0 6px rgba(26, 115, 232, 0.4);
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
 }
 
-/* Radio and Checkbox */
 .radio-group {
-  margin: 8px 0;
+  display: flex;
+  gap: 20px;
+  margin-top: 8px;
 }
 
-.appointment-form label.inline {
-  display: inline-block;
-  margin-right: 20px;
+.radio-group label {
   font-weight: normal;
-  color: #444;
 }
 
 .terms {
   display: flex;
   align-items: center;
   margin-top: 15px;
-  font-size: 14px;
-  color: #555;
 }
 
-/* Button */
-.appointment-form button {
+.terms input {
+  margin-right: 8px;
+}
+
+button {
   margin-top: 20px;
   width: 100%;
   padding: 12px;
-  background: linear-gradient(135deg, #1a73e8, #155ab6);
+  background: #3498db;
   color: white;
-  font-size: 16px;
-  font-weight: 500;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: 0.3s;
 }
 
-.appointment-form button:hover {
-  background: linear-gradient(135deg, #155ab6, #0d3c91);
+button:hover {
+  background: #2980b9;
+}
+
+/* Appointment Summary (Right Side) */
+.details-card {
+  flex: 1;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 25px 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.details-card h3 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+  border-bottom: 2px solid #27ae60;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.details-card p {
+  margin: 8px 0;
+  font-size: 15px;
+  color: #2c3e50;
+}
+
+.details-card strong {
+  color: #27ae60;
 }

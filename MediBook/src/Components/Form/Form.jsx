@@ -99,6 +99,25 @@ export default function Form() {
 
         <button type="submit">Book Appointment</button>
       </form>
+
+      {/* Display Data column */}
+
+       <div className="details-card">
+        <h3>Appointment Summary</h3>
+        <p><strong>Name:</strong> {patientData.name}</p>
+        <p><strong>Age:</strong> {patientData.age}</p>
+        <p><strong>Gender:</strong> {patientData.gender}</p>
+        <p><strong>Phone:</strong> {patientData.phone}</p>
+        <p><strong>Email:</strong> {patientData.email}</p>
+        <p><strong>Address:</strong> {patientData.address}</p>
+        <p><strong>Speciality:</strong> {patientData.speciality}</p>
+        <p><strong>Doctor:</strong> {patientData.doctor}</p>
+        <p><strong>Date:</strong> {patientData.date}</p>
+        <p><strong>Time:</strong> {patientData.time}</p>
+        <p><strong>Type:</strong> {patientData.type}</p>
+        <p><strong>Reason:</strong> {patientData.reason}</p>
+        <p><strong>Terms Accepted:</strong> {patientData.terms ? "Yes" : "No"}</p>
+      </div>
     </div>
   );
 }
