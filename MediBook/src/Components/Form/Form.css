@@ -1,4 +1,4 @@
-/* Wrapper: holds form and summary side by side */
+
 .form-wrapper {
   display: flex;
   justify-content: center;
@@ -10,11 +10,11 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Appointment Form */
+
 .appointment-form {
   flex: 1;
   max-width: 450px;
-  background: rgba(255, 255, 255, 0.8); /* glass effect */
+  background: rgba(255, 255, 255, 0.8); 
   backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 25px 30px;
@@ -94,7 +94,6 @@ button:hover {
   background: #2980b9;
 }
 
-/* Appointment Summary (Right Side) */
 .details-card {
   flex: 1;
   max-width: 400px;
