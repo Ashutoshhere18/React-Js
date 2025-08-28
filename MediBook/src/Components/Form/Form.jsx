@@ -15,16 +15,29 @@ export default function Form() {
     time: "",
     type: "",
     reason: "",
-    terms: false,
+    
   });
-
+ 
+  const [Submit,SetSubmit]=useState([])
   const handleInput = (e) => {
-    const { name, value, type, checked } = e.target;
+    const { name, value } = e.target;
     setPatientData({
       ...patientData,
-      [name]: type === "checkbox" ? checked : value,
+      [name]:  value.trim(),
     });
   };
+  
+  const HandleSubmit=(e)=>{
+    e.preventDefault();
+  const isEmpty=Object.values(patientData).some((value)=>value==="");
+
+  if(isEmpty){
+   alert("All fields are required!!")
+  }
+  else{
+    console.log(patientData);
+  }
+  }
 
   return (
     <div className="form-wrapper">
@@ -87,37 +100,12 @@ export default function Form() {
         <label>Reason for Visit</label>
         <textarea name="reason" value={patientData.reason} onChange={handleInput}></textarea>
 
-        <div className="terms">
-          <input
-            type="checkbox"
-            name="terms"
-            checked={patientData.terms}
-            onChange={handleInput}
-          />
-          <label>I agree to terms & privacy policy</label>
-        </div>
 
-        <button type="submit">Book Appointment</button>
+        <button type="submit" onClick={HandleSubmit}>Book Appointment</button>
       </form>
 
-      {/* Display Data column */}
 
-       <div className="details-card">
-        <h3>Appointment Summary</h3>
-        <p><strong>Name:</strong> {patientData.name}</p>
-        <p><strong>Age:</strong> {patientData.age}</p>
-        <p><strong>Gender:</strong> {patientData.gender}</p>
-        <p><strong>Phone:</strong> {patientData.phone}</p>
-        <p><strong>Email:</strong> {patientData.email}</p>
-        <p><strong>Address:</strong> {patientData.address}</p>
-        <p><strong>Speciality:</strong> {patientData.speciality}</p>
-        <p><strong>Doctor:</strong> {patientData.doctor}</p>
-        <p><strong>Date:</strong> {patientData.date}</p>
-        <p><strong>Time:</strong> {patientData.time}</p>
-        <p><strong>Type:</strong> {patientData.type}</p>
-        <p><strong>Reason:</strong> {patientData.reason}</p>
-        <p><strong>Terms Accepted:</strong> {patientData.terms ? "Yes" : "No"}</p>
-      </div>
+      
     </div>
   );
 }
