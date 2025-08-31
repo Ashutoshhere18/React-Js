@@ -23,23 +23,27 @@ export default function Form() {
     const { name, value } = e.target;
     setPatientData({
       ...patientData,
-      [name]:  value.trim(),
+      [name]:  value,
     });
   };
   
   const HandleSubmit=(e)=>{
     e.preventDefault();
-  const isEmpty=Object.values(patientData).some((value)=>value==="");
+  const isEmpty=Object.values(patientData).some((value)=>value.trim()==="");
 
   if(isEmpty){
    alert("All fields are required!!")
   }
   else{
-    console.log(patientData);
+    SetSubmit([...Submit,patientData]);
   }
   }
 
+
   return (
+
+   <div className="main">
+   
     <div className="form-wrapper">
       <form className="appointment-form">
         <h3>Patient Information</h3>
@@ -61,7 +65,7 @@ export default function Form() {
         </div>
 
         <label>Contact No</label>
-        <input type="tel" name="phone" value={patientData.phone} onChange={handleInput} />
+        <input type="tel" name="phone" value={patientData.phone} maxLength={"10"} onChange={handleInput} />
 
         <label>Email Id</label>
         <input type="email" name="email" value={patientData.email} onChange={handleInput} />
@@ -107,5 +111,29 @@ export default function Form() {
 
       
     </div>
+
+
+    <div className="display">
+      {
+       Submit.map((Form,index)=><div key={index}> 
+      <p>{Form.name}</p>
+      <p>{Form.age}</p>
+      <p>{Form.gender}</p>
+      <p>{Form.phone}</p>
+      <p>{Form.email}</p>
+      <p>{Form.address}</p>
+      <p>{Form.speciality}</p>
+      <p>{Form.doctor}</p>
+      <p>{Form.date}</p>
+      <p>{Form.time}</p>
+      <p>{Form.type}</p>
+      <p>{Form.reason}</p>
+    </div>)
+      }
+    </div>
+   </div>
+
+
+   
   );
 }
