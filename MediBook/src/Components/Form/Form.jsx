@@ -35,6 +35,7 @@ export default function Form() {
    alert("All fields are required!!")
   }
   else{
+    alert("✅ Appointment booked successfully!")
     SetSubmit([...Submit,patientData]);
   }
   }
