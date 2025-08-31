@@ -14,7 +14,6 @@ export default function Form() {
     date: "",
     time: "",
     type: "",
-    reason: "",
     
   });
  
@@ -43,6 +42,7 @@ export default function Form() {
 
   return (
 
+      
    <div className="main">
    
     <div className="form-wrapper">
@@ -102,8 +102,7 @@ export default function Form() {
           <option value="Health Checkup">Health Checkup</option>
         </select>
 
-        <label>Reason for Visit</label>
-        <textarea name="reason" value={patientData.reason} onChange={handleInput}></textarea>
+       
 
 
         <button type="submit" onClick={HandleSubmit}>Book Appointment</button>
