@@ -69,7 +69,9 @@ NewsFlash/
 ## 📸 Demo Preview
 
 
-Uploading bootNewsReact.mp4…
+https://github.com/user-attachments/assets/133e3102-a177-48ad-af3f-c6e1380bfe12
+
+
 
 
 
