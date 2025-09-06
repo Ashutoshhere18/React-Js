@@ -7,18 +7,18 @@ export default function Hero() {
   <section className="py-5 text-center container">
     <div className="row py-lg-5">
       <div className="col-lg-6 col-md-8 mx-auto">
-        <h1 className="fw-light">Album example</h1>
+        <h1 className="fw-light">Stay Ahead with Live News</h1>
         <p className="lead text-muted">
-          Something short and leading about the collection below—its contents,
-          the creator, etc. Make it short and sweet, but not too short so folks
-          don’t simply skip over it entirely.
+          Get real-time updates on technology, sports, politics, and entertainment — 
+        all powered by live APIs. Built with React & Bootstrap, this project brings 
+        the world to your screen in one sleek feed. 📰
         </p>
         <p>
-          <a href="#" className="btn btn-primary my-2">
-            Main call to action
+          <a href="#" className="btn btn-primary mx-2">
+            Explore News
           </a>
-          <a href="#" className="btn btn-secondary my-2">
-            Secondary action
+          <a href="#" className="btn btn-secondary mx-2">
+              Learn More
           </a>
         </p>
       </div>

@@ -25,11 +25,11 @@ export default function Albums() {
       {album.description}
       </p>
       <div className="d-flex justify-content-between align-items-center">
-        <div className="btn-group">
-          <button type="button" className="btn btn-sm btn-outline-secondary">
-            <a href={album.url} className=''> Learn More</a>
+        <div className="btn-group ">
+          <button type="button" className="btn btn-sm btn-info mx-2 rounded">
+            <a href={album.url} className='text-decoration-none text-white fw-bold'> Learn More</a>
           </button>
-          <button type="button" className="btn btn-sm btn-outline-secondary">
+          <button type="button" className="btn btn-sm btn-warning rounded fw-bold">
             Edit
           </button>
         </div>
