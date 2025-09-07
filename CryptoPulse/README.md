@@ -20,6 +20,10 @@
 ## 🖥️ Demo
 
 
+https://github.com/user-attachments/assets/6343f834-a410-40d3-83a9-457874eb2f94
+
+
+
 
 ---
 
@@ -75,7 +79,7 @@ CryptoPulse/
 ---
 
 ## 🌐 Live Demo
-
+https://github.com/Ashutoshhere18/React-Js/edit/main/CryptoPulse
 
 ---
 
