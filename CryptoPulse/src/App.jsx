@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar'
 import Hero from './Components/Hero'
 import Stats from './Components/stats'
 import CoinsTable from './Components/CoinsTable'
+import Footer from './Components/Footer'
 
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
       <Hero/>
     <Stats/>
      <CoinsTable/>
+     <Footer/>
     </div>
   )
 }
