@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react'
 
+
 export default function Stats() {
   const [Coin, SetCoin] = useState(null);
-
+  
   const FetchApi = async () => {
     const res = await fetch('https://api.coingecko.com/api/v3/global');
     const datas = await res.json();
     SetCoin(datas.data);
+  
   };
 
   useEffect(() => {
-    FetchApi(); // ✅ call the function here
+    FetchApi(); 
   }, []);
 
-  if (!Coin) return <p className="text-center my-5">Loading stats...</p>; // ✅ keep this
+  if (!Coin) return <p className="text-center my-5">Loading stats...</p>; 
 
   return (
     <div className="container my-5">
@@ -62,6 +64,7 @@ export default function Stats() {
           </div>
         </div>
       </div>
+   
     </div>
   );
 }
