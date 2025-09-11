@@ -1,15 +1,19 @@
+
 import React from 'react'
-import {Link, useNavigate} from 'react-router'
+
+import product from '../json/json'
 export default function Home() {
-    const navigate=useNavigate();
+
   return (
     <div>
-      <nav>
-        <Link to={"/Home"}>Home</Link>
-        <Link to={"/About"}>About</Link>
-        <Link to={"/Contact"}>Contact</Link>
-    </nav>
-    
+
+     {
+      product.map(product=>{
+        <div>
+          <p>{product.id}</p>
+        </div>
+      })
+     }
     </div>
   )
 }
