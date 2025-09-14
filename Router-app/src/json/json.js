@@ -1,4 +1,4 @@
-export default product=[
+const product=[
     {
       "id": 1,
       "title": "Essence Mascara Lash Princess",
@@ -1796,3 +1796,5 @@ export default product=[
       "thumbnail": "https://cdn.dummyjson.com/product-images/groceries/kiwi/thumbnail.webp"
     }
   ];
+
+  export default product;
