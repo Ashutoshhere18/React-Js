@@ -1,7 +1,9 @@
 import React from 'react'
 import product from '../json/json'
-
+import {useNavigate} from 'react-router'
+import Productdetails from './Productdetails'
 export default function Home() {
+  const Navigate=useNavigate();
   return (
     <div className="container mt-4">
       
@@ -21,7 +23,10 @@ export default function Home() {
                   {item.description.substring(0, 80)}...
                 </p>
                 <p className="fw-bold">₹{item.price}</p>
-                <button className="btn btn-primary">Add to Cart</button>
+                <button className="btn btn-primary" onClick={()=>{
+                  Navigate("/Productdetails",{state:item})
+                }}>View More</button>
+                 <button className="btn btn-primary">Add To Cart</button>
               </div>
             </div>
           </div>
