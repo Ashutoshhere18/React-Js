@@ -9,12 +9,18 @@ export default function Productdetails() {
         <img 
           src={product.thumbnail} 
           alt={product.title} 
-          className="img-fluid mb-3"
-          style={{ maxHeight: "400px", objectFit: "cover" }}
+          className=" mb-3"
+        
         />
         <h2>{product.title}</h2>
         <p>{product.description}</p>
         <h4 className="fw-bold">₹{product.price}</h4>
+        <p>{product.brand}</p>
+        <p>{product.rating}</p>
+        <p>{product.warrantyInformation}</p>
+        <p>{product.shippingInformation}</p>
+        <p>{product.availabilityStatus}</p>
+        <p>{product.returnPolicy}</p>
       </div>
     </div>
   )
