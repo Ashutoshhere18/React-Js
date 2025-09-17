@@ -4,8 +4,9 @@ import { useNavigate } from 'react-router'
 export default function Home({ products, setcart }) {
   const Navigate = useNavigate();
 
-
+   
   return (
+    
     <div className="container mt-4">
       <div className="row">
         {products && products.length > 0 ? (

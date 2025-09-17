@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function Contact() {
+  
   return (
     <div className="container mt-5">
       <h2 className="fw-bold text-center mb-4">Contact Us</h2>

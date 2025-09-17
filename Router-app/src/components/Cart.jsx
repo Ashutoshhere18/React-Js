@@ -1,5 +1,6 @@
 import React from 'react'
 import {useState,useEffect} from 'react'
+
 export default function Cart({ cart=[] ,setcart}) {
    const [total, setTotal] = useState(0);
 
@@ -17,7 +18,7 @@ export default function Cart({ cart=[] ,setcart}) {
   const RemoveItem=(id)=>{
     setcart(prev => prev.filter((cartproduct) => cartproduct.id != id));
   }
-
+  
 
   return (
     <div className="container mt-4">

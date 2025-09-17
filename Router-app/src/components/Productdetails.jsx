@@ -1,5 +1,6 @@
 import React from 'react'
 import {useLocation} from 'react-router'
+
 export default function Productdetails() {
     const location=useLocation();
     const product=location.state;
