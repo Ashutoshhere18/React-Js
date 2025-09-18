@@ -71,7 +71,11 @@ myshop/
 ### 📸 Demo
 
 
-https://github.com/user-attachments/assets/472fd6da-0258-4d2e-9009-cad57478d259
+https://github.com/user-attachments/assets/d51c7823-6d07-479a-bcba-36d9959dc9ea
+
+
+
+
 
 
 
