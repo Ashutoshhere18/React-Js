@@ -1,8 +1,11 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 export default function About() {
   return (
-    <div className="container mt-5">
+    <div>
+      <Navbar/>
+      <div className="container mt-5">
       <div className="row align-items-center">
       
         <div className="col-md-6 mb-4">
@@ -46,6 +49,7 @@ export default function About() {
           <p className="text-muted">Fast delivery and smooth shopping experience is our top priority.</p>
         </div>
       </div>
+    </div>
     </div>
   )
 }

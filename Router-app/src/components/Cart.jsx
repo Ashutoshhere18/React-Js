@@ -1,5 +1,6 @@
 import React from 'react'
 import {useState,useEffect} from 'react'
+import Navbar from './Navbar';
 
 export default function Cart({ cart=[] ,setcart}) {
    const [total, setTotal] = useState(0);
@@ -21,7 +22,9 @@ export default function Cart({ cart=[] ,setcart}) {
   
 
   return (
-    <div className="container mt-4">
+    <div>
+      <Navbar/>
+      <div className="container mt-4">
       <h2>Cart Total:{total}</h2>
         <div className="row">
           {cart.map((item, index) => (
@@ -43,6 +46,7 @@ export default function Cart({ cart=[] ,setcart}) {
             </div>
           ))}
         </div>
+    </div>
     </div>
   )
 }

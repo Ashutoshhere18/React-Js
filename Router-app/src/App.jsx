@@ -24,7 +24,7 @@ const[cart,setcart]=useState([]);
   return (
 
    <>
-    <Navbar/>
+   
    <Routes>
     <Route path='/SignIn' element={<SignIn/>}/>
     <Route path='/' element={<Home products={products} cart={cart} setcart={setcart} />}/>

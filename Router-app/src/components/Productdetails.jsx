@@ -1,11 +1,14 @@
 import React from 'react'
 import {useLocation} from 'react-router'
+import Navbar from './Navbar';
 
 export default function Productdetails() {
     const location=useLocation();
     const product=location.state;
   return (
-     <div className="container mt-4">
+    <div>
+      <Navbar/>
+       <div className="container mt-4">
       <div className="card shadow p-4">
         <img 
           src={product.thumbnail} 
@@ -23,6 +26,7 @@ export default function Productdetails() {
         <p>{product.availabilityStatus}</p>
         <p>{product.returnPolicy}</p>
       </div>
+    </div>
     </div>
   )
 }

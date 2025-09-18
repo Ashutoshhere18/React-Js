@@ -1,9 +1,12 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 export default function Contact() {
   
   return (
-    <div className="container mt-5">
+    <div>
+      <Navbar/>
+      <div className="container mt-5">
       <h2 className="fw-bold text-center mb-4">Contact Us</h2>
       <p className="text-center text-muted mb-5">
         Have questions, feedback, or need help? Fill out the form below and we’ll get back to you shortly.
@@ -48,6 +51,7 @@ export default function Contact() {
           <p className="text-muted">support@myshop.com</p>
         </div>
       </div>
+    </div>
     </div>
   )
 }

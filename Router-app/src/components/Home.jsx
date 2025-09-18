@@ -1,13 +1,15 @@
 import React from 'react'
 import { useNavigate } from 'react-router'
+import Navbar from './Navbar';
 
 export default function Home({ products, setcart }) {
   const Navigate = useNavigate();
 
    
   return (
-    
-    <div className="container mt-4">
+    <div>
+      <Navbar/>
+       <div className="container mt-4">
       <div className="row">
         {products && products.length > 0 ? (
           products.map(item => (
@@ -50,6 +52,7 @@ export default function Home({ products, setcart }) {
           <p>No products found.</p>
         )}
       </div>
+    </div>
     </div>
   )
 }
