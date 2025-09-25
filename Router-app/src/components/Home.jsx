@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 export default function Home({ products, setcart }) {
   const Navigate = useNavigate();
 
-   
+  
   return (
     <div>
       <Navbar/>
@@ -38,6 +38,7 @@ export default function Home({ products, setcart }) {
                   <button 
                     className="btn btn-success"
                     onClick={()=>{
+                     
                       setcart(prev => [...prev, item]);
                             Navigate("/Cart");
                     }}

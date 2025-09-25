@@ -4,6 +4,8 @@ import Navbar from './Navbar';
 
 export default function Cart({ cart=[] ,setcart}) {
    const [total, setTotal] = useState(0);
+   
+   
 
     const totalPrice = () => {
         let sum = 0;

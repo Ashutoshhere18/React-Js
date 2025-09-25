@@ -39,7 +39,7 @@ export default function SignIn() {
           </button>
         </form>
 
-        {/* Extra links */}
+        
         <div className="text-center mt-3">
           <p className="small">
             Don’t have an account? <a href="#">Register</a>
