@@ -52,8 +52,8 @@ export default function Navbar() {
   <div class="container-fluid bg-light py-3">
     <div class="d-flex flex-wrap gap-2 align-items-center">
       <input type="text" class="form-control w-auto" placeholder="🔍 Search orders..." />
-      <button class="btn btn-outline-primary">Filter</button>
-      <button class="btn btn-outline-secondary">Export</button>
+      <button class="btn btn-outline-primary">Search</button>
+      <button class="btn btn-outline-secondary">Filter</button>
       <button class="btn btn-primary">+ Add New</button>
     </div>
   </div>

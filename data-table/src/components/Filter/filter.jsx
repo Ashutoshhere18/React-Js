@@ -4,7 +4,9 @@ import data from './../../assets/products/data';
 export default function Filter() {
   // Step1: state for search
   const [search, setSearch] = useState("");
-
+  const[Order,SetOrder]=useState("");
+  const[Phone,Setphone]=useState("");
+  const[]=useState("");
   // Step2: copy of data
   let filteredData = [...data];
 
@@ -15,6 +17,12 @@ export default function Filter() {
     );
   }
 
+  if(Order!=""){
+   filteredData=filteredData.filter(product=>product.orderId.toLowerCase().includes(Order.toLowerCase()));
+  }
+   if(Phone!=""){
+  filteredData=filteredData.filter(product=>product.phoneNumber.includes(Phone));
+   }
   return (
     <div className="container text-center mt-4">
       <div className="row">
@@ -26,7 +34,7 @@ export default function Filter() {
 
       <div className="row mb-4">
         <div className="col">
-          <input type="text" placeholder="Order ID" />
+          <input type="text" placeholder="Order ID" value={Order} onChange={e=>SetOrder(e.target.value)} />
         </div>
         <div className="col">
           <input
@@ -37,7 +45,7 @@ export default function Filter() {
           />
         </div>
         <div className="col">
-          <input type="tel" maxLength={10} placeholder="Phone" />
+          <input type="tel" maxLength={10} placeholder="Phone" value={Phone} onChange={e=>Setphone(e.target.value)} />
         </div>
         <div className="col">
           <input type="text" placeholder="Product" />
@@ -112,7 +120,9 @@ export default function Filter() {
 
         <div className="col d-flex">
           <div>
-            <button className="mx-4 btn btn-primary">Search</button>
+            <button className="mx-4 btn btn-primary" onClick={()=>{
+              setSearch((e)=>e.target.value)
+            }}>Search</button>
           </div>
           <div>
             <button className="btn btn-danger">Clear Filters</button>
@@ -122,14 +132,61 @@ export default function Filter() {
 
       {/* Display filtered data */}
       <div className="container mt-4">
-        {filteredData.map((product, index) => (
-          <div key={index} className="row border-bottom py-2">
-            <div className="col">{product.orderId}</div>
-            <div className="col">{product.customerName}</div>
-            <div className="col">{product.phoneNumber}</div>
-            <div className="col">{product.product}</div>
-          </div>
-        ))}
+      <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Order ID</th>
+      <th scope="col">Date</th>
+      <th scope="col">Customer Name</th>
+      <th scope="col">Product</th>
+      <th scope="col">Price</th>
+      <th scope="col">Payment</th>
+      <th scope="col">Status</th>
+      <th scope="col">Phone Number</th>
+    </tr>
+  </thead>
+    {
+      filteredData.map((product,index)=>{
+      
+        let statusclass="";
+        if(product.status==="Completed"){
+          statusclass="text-success fw-bold"
+        }
+        else if(product.status==="Pending"){
+          statusclass="text-warning fw-bold"
+        }
+         else if(product.status==="New"){
+          statusclass="text-info fw-bold "
+        }else{
+          statusclass="text-danger fw-bold"
+        }
+
+        let paymentClass = "";
+    if (product.payment === "Paid") {
+      paymentClass = "text-success fw-bold"; 
+    } else if (product.payment === "Pending") {
+      paymentClass = "text-warning fw-bold"; 
+    } else {
+      paymentClass = "text-danger fw-bold"; 
+    }
+         return(
+          <tbody key={index}>
+    <tr>
+      <th scope="row">{product.orderId}</th>
+      <td>{product.date}</td>
+      <td>{product.customerName}</td>
+      <td>{product.product}</td>
+      <td>{product.price}</td>
+      <td className={paymentClass}>{product.payment}</td>
+      <td className={statusclass}>{product.status}</td>
+      <td>{product.phoneNumber}</td>
+    </tr>
+    
+  </tbody>
+         )
+      })
+    }
+</table>
       </div>
     </div>
   );
