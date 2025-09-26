@@ -1,7 +1,8 @@
 import React from 'react'
 import Navbar from './components/Navbar/Navbar'
 import Filter from './components/Filter/filter'
-import ProductsData from './assets/products/data'
+import Home from './components/Home/Home'
+import Filterbar from './components/FilterBar/Filterbar'
 
 
 export default function App() {
@@ -9,7 +10,8 @@ export default function App() {
     <>
     <Navbar/>
     <Filter/>
-   
+    <Home/>
+    <Filterbar/>
     </>
   )
 }

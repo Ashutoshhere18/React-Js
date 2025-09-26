@@ -1,4 +1,4 @@
-export const data=[
+ const data=[
   {
     "orderId": "ORD1001",
     "customerName": "Amit Sharma",
@@ -6,7 +6,8 @@ export const data=[
     "product": "Smartphone",
     "payment": "Paid",
     "status": "Completed",
-    "date": "2022-02-01"
+    "date": "2022-02-01",
+    "price": 25000
   },
   {
     "orderId": "ORD1002",
@@ -15,7 +16,8 @@ export const data=[
     "product": "Laptop",
     "payment": "Pending",
     "status": "New",
-    "date": "2022-02-02"
+    "date": "2022-02-02",
+    "price": 55000
   },
   {
     "orderId": "ORD1003",
@@ -24,7 +26,8 @@ export const data=[
     "product": "Headphones",
     "payment": "Paid",
     "status": "Completed",
-    "date": "2022-02-03"
+    "date": "2022-02-03",
+    "price": 3000
   },
   {
     "orderId": "ORD1004",
@@ -33,7 +36,8 @@ export const data=[
     "product": "Smartwatch",
     "payment": "Paid",
     "status": "Completed",
-    "date": "2022-02-04"
+    "date": "2022-02-04",
+    "price": 12000
   },
   {
     "orderId": "ORD1005",
@@ -42,7 +46,8 @@ export const data=[
     "product": "Tablet",
     "payment": "Pending",
     "status": "New",
-    "date": "2022-02-05"
+    "date": "2022-02-05",
+    "price": 20000
   },
   {
     "orderId": "ORD1006",
@@ -51,7 +56,8 @@ export const data=[
     "product": "Camera",
     "payment": "Paid",
     "status": "Completed",
-    "date": "2022-02-06"
+    "date": "2022-02-06",
+    "price": 40000
   },
   {
     "orderId": "ORD1007",
@@ -60,7 +66,8 @@ export const data=[
     "product": "Printer",
     "payment": "Pending",
     "status": "Pending",
-    "date": "2022-02-07"
+    "date": "2022-02-07",
+    "price": 8000
   },
   {
     "orderId": "ORD1008",
@@ -69,7 +76,8 @@ export const data=[
     "product": "Router",
     "payment": "Paid",
     "status": "Completed",
-    "date": "2022-02-08"
+    "date": "2022-02-08",
+    "price": 2500
   },
   {
     "orderId": "ORD1009",
@@ -78,7 +86,8 @@ export const data=[
     "product": "Monitor",
     "payment": "Paid",
     "status": "Completed",
-    "date": "2022-02-09"
+    "date": "2022-02-09",
+    "price": 15000
   },
   {
     "orderId": "ORD1010",
@@ -87,7 +96,8 @@ export const data=[
     "product": "Keyboard",
     "payment": "Pending",
     "status": "Cancelled",
-    "date": "2022-02-10"
+    "date": "2022-02-10",
+    "price": 1500
   },
   {
     "orderId": "ORD1011",
@@ -96,7 +106,8 @@ export const data=[
     "product": "Mouse",
     "payment": "Paid",
     "status": "Completed",
-    "date": "2022-02-11"
+    "date": "2022-02-11",
+    "price": 700
   },
   {
     "orderId": "ORD1012",
@@ -105,7 +116,8 @@ export const data=[
     "product": "Desk Lamp",
     "payment": "Paid",
     "status": "Completed",
-    "date": "2022-02-12"
+    "date": "2022-02-12",
+    "price": 2000
   },
   {
     "orderId": "ORD1013",
@@ -114,7 +126,8 @@ export const data=[
     "product": "Charger",
     "payment": "Pending",
     "status": "New",
-    "date": "2022-02-13"
+    "date": "2022-02-13",
+    "price": 800
   },
   {
     "orderId": "ORD1014",
@@ -123,7 +136,8 @@ export const data=[
     "product": "Power Bank",
     "payment": "Paid",
     "status": "Completed",
-    "date": "2022-02-14"
+    "date": "2022-02-14",
+    "price": 1500
   },
   {
     "orderId": "ORD1015",
@@ -132,7 +146,8 @@ export const data=[
     "product": "Speakers",
     "payment": "Pending",
     "status": "Pending",
-    "date": "2022-02-15"
+    "date": "2022-02-15",
+    "price": 6000
   },
   {
     "orderId": "ORD1016",
@@ -141,7 +156,8 @@ export const data=[
     "product": "Microphone",
     "payment": "Paid",
     "status": "Completed",
-    "date": "2022-02-16"
+    "date": "2022-02-16",
+    "price": 4500
   },
   {
     "orderId": "ORD1017",
@@ -150,7 +166,8 @@ export const data=[
     "product": "External HDD",
     "payment": "Paid",
     "status": "Completed",
-    "date": "2022-02-17"
+    "date": "2022-02-17",
+    "price": 5000
   },
   {
     "orderId": "ORD1018",
@@ -159,7 +176,8 @@ export const data=[
     "product": "USB Cable",
     "payment": "Pending",
     "status": "New",
-    "date": "2022-02-18"
+    "date": "2022-02-18",
+    "price": 300
   },
   {
     "orderId": "ORD1019",
@@ -168,7 +186,8 @@ export const data=[
     "product": "SSD",
     "payment": "Paid",
     "status": "Completed",
-    "date": "2022-02-01"
+    "date": "2022-02-01",
+    "price": 6000
   },
   {
     "orderId": "ORD1020",
@@ -177,7 +196,8 @@ export const data=[
     "product": "Graphics Card",
     "payment": "Pending",
     "status": "New",
-    "date": "2022-02-02"
+    "date": "2022-02-02",
+    "price": 35000
   },
   {
     "orderId": "ORD1021",
@@ -186,7 +206,8 @@ export const data=[
     "product": "Laptop Stand",
     "payment": "Paid",
     "status": "Completed",
-    "date": "2022-02-03"
+    "date": "2022-02-03",
+    "price": 1200
   },
   {
     "orderId": "ORD1022",
@@ -195,7 +216,8 @@ export const data=[
     "product": "Webcam",
     "payment": "Pending",
     "status": "Pending",
-    "date": "2022-02-04"
+    "date": "2022-02-04",
+    "price": 3500
   },
   {
     "orderId": "ORD1023",
@@ -204,7 +226,8 @@ export const data=[
     "product": "Projector",
     "payment": "Paid",
     "status": "Completed",
-    "date": "2022-02-05"
+    "date": "2022-02-05",
+    "price": 45000
   },
   {
     "orderId": "ORD1024",
@@ -213,7 +236,8 @@ export const data=[
     "product": "Tablet Case",
     "payment": "Paid",
     "status": "Completed",
-    "date": "2022-02-06"
+    "date": "2022-02-06",
+    "price": 1000
   },
   {
     "orderId": "ORD1025",
@@ -222,7 +246,8 @@ export const data=[
     "product": "Bluetooth Speaker",
     "payment": "Pending",
     "status": "Cancelled",
-    "date": "2022-02-07"
+    "date": "2022-02-07",
+    "price": 4000
   },
   {
     "orderId": "ORD1026",
@@ -231,7 +256,8 @@ export const data=[
     "product": "Earbuds",
     "payment": "Paid",
     "status": "Completed",
-    "date": "2022-02-08"
+    "date": "2022-02-08",
+    "price": 2500
   },
   {
     "orderId": "ORD1027",
@@ -240,7 +266,8 @@ export const data=[
     "product": "Smart Glasses",
     "payment": "Paid",
     "status": "Completed",
-    "date": "2022-02-09"
+    "date": "2022-02-09",
+    "price": 15000
   },
   {
     "orderId": "ORD1028",
@@ -249,7 +276,8 @@ export const data=[
     "product": "Fitness Band",
     "payment": "Pending",
     "status": "New",
-    "date": "2022-02-10"
+    "date": "2022-02-10",
+    "price": 5000
   },
   {
     "orderId": "ORD1029",
@@ -258,7 +286,8 @@ export const data=[
     "product": "Drone",
     "payment": "Paid",
     "status": "Completed",
-    "date": "2022-02-11"
+    "date": "2022-02-11",
+    "price": 60000
   },
   {
     "orderId": "ORD1030",
@@ -267,7 +296,10 @@ export const data=[
     "product": "VR Headset",
     "payment": "Pending",
     "status": "Pending",
-    "date": "2022-02-12"
+    "date": "2022-02-12",
+    "price": 30000
   }
 ];
 
+
+export default data;
