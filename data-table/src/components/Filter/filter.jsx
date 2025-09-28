@@ -6,7 +6,9 @@ export default function Filter() {
   const [search, setSearch] = useState("");
   const[Order,SetOrder]=useState("");
   const[Phone,Setphone]=useState("");
-  const[]=useState("");
+  const[product,Setproducts]=useState("");
+  const[payment,SetPayment]=useState("");
+  const[status,SetStatus]=useState("");
   // Step2: copy of data
   let filteredData = [...data];
 
@@ -23,6 +25,18 @@ export default function Filter() {
    if(Phone!=""){
   filteredData=filteredData.filter(product=>product.phoneNumber.includes(Phone));
    }
+
+   if(product!=""){
+    filteredData=filteredData.filter(Product=>Product.product.toLowerCase().includes(product.toLowerCase()));
+   }
+
+    if(payment!=""){
+    filteredData=filteredData.filter(Product=>Product.payment.includes(payment));
+   }
+  if(status!=""){
+    filteredData=filteredData.filter(Product=>Product.status.includes(status));
+  }
+
   return (
     <div className="container text-center mt-4">
       <div className="row">
@@ -48,7 +62,7 @@ export default function Filter() {
           <input type="tel" maxLength={10} placeholder="Phone" value={Phone} onChange={e=>Setphone(e.target.value)} />
         </div>
         <div className="col">
-          <input type="text" placeholder="Product" />
+          <input type="text" placeholder="Product" value={product} onChange={e=>Setproducts(e.target.value)} />
         </div>
       </div>
 
@@ -61,7 +75,7 @@ export default function Filter() {
 
       <div className="row mb-4">
         <div className="col">
-          <select>
+          <select value={payment} onChange={e=>SetPayment(e.target.value)}>
             <option value="">Select</option>
             <option value="Paid" className="text-success">Paid</option>
             <option value="Pending" className="text-warning">Pending</option>
@@ -70,16 +84,18 @@ export default function Filter() {
         </div>
 
         <div className="col">
-          <div className="dropdown">
+          <div className="dropdown" value={status}
+              onChange={e=>SetStatus(e.target.value)}>
             <button
               className="btn btn-outline-primary dropdown-toggle"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
+              
             >
               Filter Orders
             </button>
-            <ul className="dropdown-menu p-2">
+            <ul className="dropdown-menu p-2" >
               <li>
                 <div className="form-check">
                   <input className="form-check-input" type="checkbox" id="allOrders" />
