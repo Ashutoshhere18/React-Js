@@ -1,16 +1,56 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
 
-Currently, two official plugins are available:
+# 🛒✨ Smart Order Filtering System ✨🛒  
+### 🔎 Search • 🎯 Filter • 🧹 Reset  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A **React + Bootstrap** project for managing & filtering orders in style 🚀  
 
-## React Compiler
+</div>
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🎥 Demo Video  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+---
+
+## 🚀 Key Features  
+- 🧩 **Component-Based UI** → Every section is reusable & well-structured  
+- 🔎 **Multi-Field Filtering** → Order ID, Name, Phone, Product  
+- 💰 **Payment Filter** → Paid / Pending / Not Paid  
+- 📦 **Status Filter** → All / Delivered / Pending / Cancelled  
+- 📅 **Date Filter** → Works perfectly with `YYYY-MM-DD` format  
+- 🎯 **One-Click Search** → Filters only when you hit search  
+- 🧹 **Clear Filters** → Reset all inputs instantly  
+
+---
+
+## ⚛️ Tech Stack  
+- **React.js** ⚛️ – Component-based frontend  
+- **Bootstrap 5** 🎨 – Styling & layout  
+- **JavaScript (ES6+)** ⚡ – Filtering logic  
+
+---
+
+
+## ✨ Future Improvements
+
+* 📊 Sorting orders by Price or Date
+* 🌐 Connect with live API
+* 🖼️ Add product images for better UX
+* 🔐 Authentication for secure access
+
+---
+
+<div align="center">
+
+💡 Built with ❤️ using ⚛️ React & ☕ Coffee
+
+</div>
+```
+
+---
+
+
