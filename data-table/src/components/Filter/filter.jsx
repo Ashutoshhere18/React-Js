@@ -2,41 +2,75 @@ import React, { useState } from "react";
 import data from './../../assets/products/data';
 
 export default function Filter() {
-  // Step1: state for search
+
+   // Step1: state for inputs
   const [search, setSearch] = useState("");
-  const[Order,SetOrder]=useState("");
-  const[Phone,Setphone]=useState("");
-  const[product,Setproducts]=useState("");
-  const[payment,SetPayment]=useState("");
-  const[status,SetStatus]=useState("");
-  // Step2: copy of data
-  let filteredData = [...data];
+  const [Order, SetOrder] = useState("");
+  const [Phone, Setphone] = useState("");
+  const [product, Setproducts] = useState("");
+  const [payment, SetPayment] = useState("");
+  const [status, SetStatus] = useState("All");
+  const [Date, SetDate] = useState("");
 
-  // Step3: filter by customerName
-  if (search) {
-    filteredData = filteredData.filter(product =>
-      product.customerName.toLowerCase().includes(search.toLowerCase())
-    );
-  }
+  //  new state for filtered result
+  const [filteredData, setFilteredData] = useState(data)
 
-  if(Order!=""){
-   filteredData=filteredData.filter(product=>product.orderId.toLowerCase().includes(Order.toLowerCase()));
-  }
-   if(Phone!=""){
-  filteredData=filteredData.filter(product=>product.phoneNumber.includes(Phone));
-   }
+  const handleSearch = () => {
+    let tempData = [...data];
 
-   if(product!=""){
-    filteredData=filteredData.filter(Product=>Product.product.toLowerCase().includes(product.toLowerCase()));
-   }
+    if (search) {
+      tempData = tempData.filter(product =>
+        product.customerName.toLowerCase().includes(search.toLowerCase())
+      );
+    }
 
-    if(payment!=""){
-    filteredData=filteredData.filter(Product=>Product.payment.includes(payment));
-   }
-  if(status!=""){
-    filteredData=filteredData.filter(Product=>Product.status.includes(status));
-  }
+    if (Order !== "") {
+      tempData = tempData.filter(product =>
+        product.orderId.toLowerCase().includes(Order.toLowerCase())
+      );
+    }
 
+    if (Phone !== "") {
+      tempData = tempData.filter(product =>
+        product.phoneNumber.includes(Phone)
+      );
+    }
+
+    if (product !== "") {
+      tempData = tempData.filter(p =>
+        p.product.toLowerCase().includes(product.toLowerCase())
+      );
+    }
+
+    if (payment !== "") {
+      tempData = tempData.filter(p => p.payment.includes(payment));
+    }
+
+    if (status !== "All") {
+      tempData = tempData.filter(p =>
+        p.status.toLowerCase().includes(status.toLowerCase())
+      );
+    }
+
+    if (Date !== "") {
+      tempData = tempData.filter(p => p.date === Date);
+    }
+
+    setFilteredData(tempData);
+  };
+
+  // Clear 
+
+   const clearFilters = () => {
+    setSearch("");
+    SetOrder("");
+    Setphone("");
+    Setproducts("");
+    SetPayment("");
+    SetStatus("All");
+    SetDate("");
+    setFilteredData(data); // reset
+  };
   return (
     <div className="container text-center mt-4">
       <div className="row">
@@ -84,64 +118,25 @@ export default function Filter() {
         </div>
 
         <div className="col">
-          <div className="dropdown" value={status}
-              onChange={e=>SetStatus(e.target.value)}>
-            <button
-              className="btn btn-outline-primary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-              
-            >
-              Filter Orders
-            </button>
-            <ul className="dropdown-menu p-2" >
-              <li>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" id="allOrders" />
-                  <label className="form-check-label fw-bold" htmlFor="allOrders">All</label>
-                </div>
-              </li>
-              <li>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" id="newOrders" />
-                  <label className="form-check-label text-info fw-bold" htmlFor="newOrders">New</label>
-                </div>
-              </li>
-              <li>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" id="completedOrders" />
-                  <label className="form-check-label text-success fw-bold" htmlFor="completedOrders">Completed</label>
-                </div>
-              </li>
-              <li>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" id="pendingOrders" />
-                  <label className="form-check-label text-warning fw-bold" htmlFor="pendingOrders">Pending</label>
-                </div>
-              </li>
-              <li>
-                <div className="form-check">
-                  <input className="form-check-input" type="checkbox" id="cancelledOrders" />
-                  <label className="form-check-label text-danger fw-bold" htmlFor="cancelledOrders">Cancelled</label>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <select value={status} onChange={e => SetStatus(e.target.value)}>
+    <option value="All">All</option>
+    <option value="Delivered">Delivered</option>
+    <option value="Pending">Pending</option>
+    <option value="Cancelled">Cancelled</option>
+  </select>
+</div>
+
 
         <div className="col">
-          <input type="date" />
+          <input type="date" value={Date} onChange={e=>SetDate(e.target.value)} />
         </div>
 
         <div className="col d-flex">
           <div>
-            <button className="mx-4 btn btn-primary" onClick={()=>{
-              setSearch((e)=>e.target.value)
-            }}>Search</button>
+            <button className="mx-4 btn btn-primary" onClick={handleSearch}>Search</button>
           </div>
           <div>
-            <button className="btn btn-danger">Clear Filters</button>
+            <button className="btn btn-danger" onClick={clearFilters}>Clear Filters</button>
           </div>
         </div>
       </div>
