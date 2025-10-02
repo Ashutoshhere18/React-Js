@@ -26,6 +26,10 @@ A simple React app to manage your list of favorite movies using **Local Storage 
 ## 📸 Demo
 
 
+https://github.com/user-attachments/assets/4fd12184-e929-4e65-90df-4d47a46ab3df
+
+
+
 ---
 
 ## 👨‍💻 Author
@@ -34,15 +38,6 @@ Developed by **[Mishra Ashutosh]** ✨
 
 ---
 
-## 🏆 Marks Distribution
 
-* Add Movie (2 marks)
-* Display Movies (2 marks)
-* Edit Movie (2 marks)
-* Delete Movie (2 marks)
-* Session Storage (2 marks)
-* **Bonus**: Styling / Notifications
-
----
 
 
