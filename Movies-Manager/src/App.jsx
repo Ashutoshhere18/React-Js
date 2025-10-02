@@ -7,29 +7,29 @@ import "./App.css";
 export default function App() {
   const [movies, setMovies] = useState([]);
 
-  // Load movies from Local Storage on mount
+  
   useEffect(() => {
     const savedMovies = JSON.parse(localStorage.getItem("movies")) || [];
     setMovies(savedMovies);
   }, []);
 
-  // Save to Local Storage whenever movies change
+ 
   useEffect(() => {
     localStorage.setItem("movies", JSON.stringify(movies));
   }, [movies]);
 
-  // Add new movie
+ 
   const addMovie = (movie) => {
     setMovies([...movies, movie]);
   };
 
-  // Delete movie
+
   const deleteMovie = (index) => {
     const updated = movies.filter((_, i) => i !== index);
     setMovies(updated);
   };
 
-  // Edit movie
+ 
   const editMovie = (index, updatedMovie) => {
     const updated = [...movies];
     updated[index] = updatedMovie;
