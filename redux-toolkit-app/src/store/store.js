@@ -1,11 +1,9 @@
 import {configureStore} from '@reduxjs/toolkit'
-
-import {todoReducer} from '../slices/todoSlice'
-
+import Books from '../slices/BooksSlice'
 const store=configureStore({
     reducer:{
-        todos:todoReducer,
-    },
-});
+        Book:Books
+    }
+})
 
 export default store;
