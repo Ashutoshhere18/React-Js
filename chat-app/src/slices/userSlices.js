@@ -11,6 +11,15 @@ const user={
 
 };
 return user;
+});
+
+export const signUp=createAsyncThunk("user/signup",async({email,password})=>{
+const userCredential= await createUserWithEmailAndPassword(auth,email,password);
+const user={
+    name:userCredential.user.displayName,
+    email:userCredential.user.email,
+};
+return user;
 })
 
 const initialState={
@@ -32,6 +41,15 @@ const userSlice=createSlice({
         }).addCase(signin.rejected,(state,action)=>{
             state.isLoading=false,
              state.error="Sign In failed"
+        }).addCase(signUp.pending,(state)=>{
+            state.isLoading=true;
+        }).addCase(signUp.fulfilled,(state,action)=>{
+            state.isLoading=false;
+            state.users.push(action.payload);
+            alert("Sign Up successfully!!")
+        }).addCase(signUp.rejected,(state)=>{
+            state.isLoading=false;
+            state.error="Error in sign up ";
         })
     }
 });
