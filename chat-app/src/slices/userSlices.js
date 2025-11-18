@@ -27,7 +27,8 @@ const userSlice=createSlice({
           state.isLoading=true
         }).addCase(signin.fulfilled,(state,action)=>{
             state.users.push(action.payload);
-            state.isLoading=false
+            state.isLoading=false;
+            alert("User Sign In successfully!")
         }).addCase(signin.rejected,(state,action)=>{
             state.isLoading=false,
              state.error="Sign In failed"
