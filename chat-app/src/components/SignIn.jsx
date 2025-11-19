@@ -3,12 +3,7 @@ import {signin,fetchUser} from '../slices/userSlices'
 import {useDispatch,useSelector} from 'react-redux'
 
 
-
-
-
 export default function SignIn() {
-
-
     const dispatch=useDispatch();
     useEffect(()=>{
   dispatch(fetchUser());
@@ -28,9 +23,7 @@ const [password,setPassword]=useState("");
         </div>
       <input type="text" placeholder='Enter Email' value={email} onChange={(e)=>setEmail(e.target.value)} />
       <input type="text" placeholder='Enter Password' value={password} onChange={(e)=>setPassword(e.target.value)} />
-      <button onClick={()=>{
-        dispatch(signin({email,password}))
-      }}>Sign In</button>
+      <button onClick={()=>dispatch(signin({email,password}))}>Sign In</button>
     </div>
   )
 }
