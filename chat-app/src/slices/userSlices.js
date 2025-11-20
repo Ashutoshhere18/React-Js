@@ -4,7 +4,7 @@ import {
   createUserWithEmailAndPassword,
 } from "firebase/auth";
 import { auth, db } from "../firebase";
-import { collection, addDoc, getDocs } from "firebase/firestore";
+import { collection, addDoc, getDocs,setDoc,doc } from "firebase/firestore";
 
 export const signin = createAsyncThunk(
   "user/signin",
@@ -18,11 +18,14 @@ export const signin = createAsyncThunk(
       name: userCredential.user.displayName,
       email: userCredential.user.email,
     };
-    await addDoc(collection(db, "users"), user);
-    // alert("user added successfully!!");
+    // await addDoc(collection(db, "users"), user);
+
+    await setDoc(doc(db,"users",email),user)
+    alert("user sign in successfully!!");
    
     return user;
   }
+
 );
 
 export const signUp = createAsyncThunk(
@@ -72,11 +75,13 @@ const userSlice = createSlice({
             const isCheck=state.users.find((e)=>e.email==user.email);
             if(!isCheck){
                 state.users.push(user);
-            }
-            localStorage.setItem("user",JSON.stringify(user));
+                 localStorage.setItem("user",JSON.stringify(user));
             state.currentUser=user;
             state.isLoading = false;
             alert("user signin successfully !!")
+            }
+           
+           
       })
       .addCase(signin.rejected, (state, action) => {
         (state.isLoading = false), (state.error = "Sign In failed");
