@@ -19,7 +19,7 @@ export const signin = createAsyncThunk(
       email: userCredential.user.email,
     };
     await addDoc(collection(db, "users"), user);
-    alert("user added successfully!!");
+    // alert("user added successfully!!");
    
     return user;
   }
@@ -49,6 +49,7 @@ export const fetchUser = createAsyncThunk("user/fetch", async () => {
 });
 const initialState = {
   users: [],
+  currentUser:{},
   isLoading: false,
   error: null,
 };
@@ -56,15 +57,26 @@ const initialState = {
 const userSlice = createSlice({
   name: "user",
   initialState: initialState,
+  reducers:{
+    getUser:(state)=>{
+   state.currentUser=JSON.parse(localStorage.getItem("user")||("{}"));
+    }
+  },
   extraReducers: (builder) => {
     builder
       .addCase(signin.pending, (state, action) => {
         state.isLoading = true;
       })
       .addCase(signin.fulfilled, (state, action) => {
-        // state.users.push(action.payload);
-        state.isLoading = false;
-        alert("User Sign In successfully!");
+        const user=action.payload;
+            const isCheck=state.users.find((e)=>e.email==user.email);
+            if(!isCheck){
+                state.users.push(user);
+            }
+            localStorage.setItem("user",JSON.stringify(user));
+            state.currentUser=user;
+            state.isLoading = false;
+            alert("user signin successfully !!")
       })
       .addCase(signin.rejected, (state, action) => {
         (state.isLoading = false), (state.error = "Sign In failed");
@@ -89,3 +101,4 @@ const userSlice = createSlice({
 });
 
 export default userSlice.reducer;
+export const{getUser}=userSlice.actions;
