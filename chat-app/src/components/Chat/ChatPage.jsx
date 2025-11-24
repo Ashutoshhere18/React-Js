@@ -7,20 +7,23 @@ import {getUser,getCurrentUser} from '../../slices/userSlices'
 
 export default function ChatPage() {
   const dispatch=useDispatch();
-  const {currentUser}=useSelector(state=>state.user);
+  // const {currentUser}=useSelector(state=>state.user);
+  const currentUser=JSON.parse(localStorage.getItem("user"));
    const {chats}=useSelector((state)=>state.chats);
    const [message,setMessage]=useState("")
     const location=useLocation();
     const receiver=location.state;
 
     useEffect(()=>{
-      dispatch(getCurrentUser());
+      // dispatch(getCurrentUser());
       dispatch(getUser())
       dispatch(readMessages({sender:currentUser.email,receiver:receiver.email}))
     },[])
 
     const HandleMessage=()=>{
       dispatch(sendMessage({message:message,sender:currentUser.email,receiver:receiver.email}))
+       dispatch(readMessages({sender:currentUser.email,receiver:receiver.email}))
+       setMessage("")
     }
   return (
    <div className="chat-view">
@@ -33,7 +36,7 @@ export default function ChatPage() {
     </div>
 
     <div className="input-area">
-      <input onChange={(e)=>setMessage(e.target.value)} type="text" />
+      <input onChange={(e)=>setMessage(e.target.value)} value={message} type="text" />
       <button onClick={HandleMessage}>Send</button>
     </div>
   </div>
