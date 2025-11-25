@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 
-import {signUp} from '../slices/userSlices'
+import {signUp} from '../../slices/userSlices'
 import {useDispatch,useSelector} from 'react-redux'
+import '../SignUp/SignUp.css'
 
 export default function SignUp() {
 

@@ -1,8 +1,8 @@
 
 import './App.css'
 import ChatPage from './components/Chat/ChatPage'
-import SignIn from './components/SignIn'
-import SignUp from './components/SignUp'
+import SignIn from './components/SignIn/SignIn'
+import SignUp from './components/SignUp/SignUp'
 import UserHomePage from './components/UserHomePage'
 import {Route,Routes} from 'react-router'
 function App() {
