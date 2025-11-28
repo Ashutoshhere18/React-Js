@@ -1,106 +1,102 @@
+
+
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { addPostThunk } from "../../redux/postSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { addPost } from "../../redux/postSlice";
 
 export default function PostForm() {
   const dispatch = useDispatch();
+  const { currentUser } = useSelector((state) => state.user);
 
-  const [formData, setFormData] = useState({
-    title: "",
-    description: "",
-    date: "",
-    image: "",
-    category: "",
-  });
-
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [category, setCategory] = useState("");
+  const [image, setImage] = useState("");
   const [error, setError] = useState("");
 
-  // Handle input change
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  // Submit Handler
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Basic validation
-    if (
-      !formData.title ||
-      !formData.description ||
-      !formData.date ||
-      !formData.image ||
-      !formData.category
-    ) {
-      setError("Please fill all fields!");
+    if (!title || !content) {
+      setError("Title and Description are required!");
       return;
     }
 
-    // Dispatch thunk
-    dispatch(addPostThunk(formData));
+    const newPost = {
+      id: Date.now(),
+      title,
+      content,
+      author: currentUser.username,
+      date: new Date().toISOString().split("T")[0],
+      category,
+      image,
+      likes: 0,
+    };
 
-    // Reset form
-    setFormData({
-      title: "",
-      description: "",
-      date: "",
-      image: "",
-      category: "",
-    });
+    dispatch(addPost(newPost));
+    setTitle("");
+    setContent("");
+    setCategory("");
+    setImage("");
     setError("");
   };
 
   return (
-    <div>
-      <h2>Create / Edit Post</h2>
+    <div className="container my-5">
+      <div className="card shadow-lg p-4 rounded-4">
+        <h2 className="text-center mb-4 text-primary">Create New Blog Post</h2>
+        {error && <div className="alert alert-danger">{error}</div>}
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label className="form-label fw-bold">Title</label>
+            <input
+              type="text"
+              className="form-control form-control-lg shadow-sm"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              placeholder="Enter blog title"
+            />
+          </div>
 
-      {error && <p style={{ color: "red" }}>{error}</p>}
+          <div className="mb-3">
+            <label className="form-label fw-bold">Description</label>
+            <textarea
+              className="form-control form-control-lg shadow-sm"
+              rows="5"
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              placeholder="Enter blog description"
+            ></textarea>
+          </div>
 
-      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", width: "300px" }}>
-        
-        <input
-          type="text"
-          name="title"
-          placeholder="Post Title"
-          value={formData.title}
-          onChange={handleChange}
-        />
+          <div className="mb-3">
+            <label className="form-label fw-bold">Category</label>
+            <input
+              type="text"
+              className="form-control form-control-lg shadow-sm"
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              placeholder="Enter category"
+            />
+          </div>
 
-        <textarea
-          name="description"
-          placeholder="Post Description"
-          value={formData.description}
-          onChange={handleChange}
-        />
+          <div className="mb-3">
+            <label className="form-label fw-bold">Image URL</label>
+            <input
+              type="text"
+              className="form-control form-control-lg shadow-sm"
+              value={image}
+              onChange={(e) => setImage(e.target.value)}
+              placeholder="Paste image URL here"
+            />
+          </div>
 
-        <input
-          type="date"
-          name="date"
-          value={formData.date}
-          onChange={handleChange}
-        />
-
-        <input
-          type="text"
-          name="image"
-          placeholder="Image URL"
-          value={formData.image}
-          onChange={handleChange}
-        />
-
-        <input
-          type="text"
-          name="category"
-          placeholder="Category (e.g. Tech, Travel)"
-          value={formData.category}
-          onChange={handleChange}
-        />
-
-        <button type="submit">Add Post</button>
-      </form>
+          <div className="d-grid">
+            <button className="btn btn-primary btn-lg shadow-sm" type="submit">
+              Add Post
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
