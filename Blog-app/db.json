@@ -1,0 +1,10 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "First Blog Post",
+      "content": "This is the first sample blog post.",
+      "author": "Admin"
+    }
+  ]
+}
