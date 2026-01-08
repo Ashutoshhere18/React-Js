@@ -26,6 +26,10 @@ A simple React app to manage your list of favorite movies using **Local Storage 
 ## 📸 Demo
 
 
+https://github.com/user-attachments/assets/1ecd87eb-3954-4bbe-873b-9ec72a6fe467
+
+
+
 ---
 
 ## 👨‍💻 Author
