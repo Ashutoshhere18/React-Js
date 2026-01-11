@@ -1,0 +1,35 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Mobile Cover",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "Mobile charger",
+      "views": 200
+    },
+    {
+      "id": "f256",
+      "title": {
+        "title": "Mobile Display",
+        "views": 300
+      },
+      "views": {
+        "requestId": "Bka1F9TZyThnk-S2HmyCL",
+        "signal": {}
+      }
+    },
+    {
+      "id": "8f11",
+      "title": "Mobile Display",
+      "views": 300
+    },
+    {
+      "id": "0b20",
+      "title": "Mobile Display",
+      "views": 300
+    }
+  ]
+}
