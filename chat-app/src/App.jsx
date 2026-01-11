@@ -1,0 +1,24 @@
+
+import './App.css'
+import ChatPage from './components/Chat/ChatPage'
+import SignIn from './components/SignIn/SignIn'
+import SignUp from './components/SignUp/SignUp'
+import UserHomePage from './components/HomePage/UserHomePage'
+import {Route,Routes} from 'react-router'
+function App() {
+ 
+
+  return (
+    <>
+ <Routes>
+  <Route path='/' element={<SignIn/>}/>
+  <Route path='/signup' element={<SignUp/>}/>
+  <Route path='/home' element={<UserHomePage/>}/>
+  <Route path='/chat' element={<ChatPage/>}/>
+ </Routes>
+    
+    </>
+  )
+}
+
+export default App

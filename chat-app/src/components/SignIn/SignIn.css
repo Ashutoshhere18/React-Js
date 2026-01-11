@@ -1,0 +1,99 @@
+/* Background - More dynamic and deeper space feel */
+.auth-wrapper {
+  height: 100vh;
+  width: 100%;
+  /* Deep purple/blue radial gradient for a cosmic look */
+  background: radial-gradient(circle at 70% 30%, #1A0A33 0%, #03081F 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Use a system font for clean readability */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden; /* Important for clean background */
+}
+
+/* Glass Card - Enhanced Glassmorphism with slight metallic tint */
+.auth-card {
+  width: 360px;
+  padding: 40px 35px; /* Slightly more horizontal padding */
+  border-radius: 24px; /* Slightly softer corners */
+  /* Intense blur for a high-end glass effect */
+  backdrop-filter: blur(20px) saturate(150%);
+  /* Use a subtle, dark transparent background */
+  background: rgba(255, 255, 255, 0.05); 
+  /* Brighter, more defined border for separation */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  /* Inner shadow for depth */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), 0 0 40px rgba(71, 15, 128, 0.2); /* Outer dark shadow + subtle inner glow */
+  display: flex;
+  flex-direction: column;
+  gap: 28px; /* Increased spacing */
+  animation: fadeIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smoother animation curve */
+}
+
+/* Title - Cleaner, brighter title */
+.auth-title {
+  text-align: center;
+  font-size: 30px; /* Slightly larger */
+  font-weight: 700; /* Bolder */
+  color: #FFFFFF; /* Pure white */
+  letter-spacing: 0.8px;
+  /* Subtle text shadow for a glow/lifted effect */
+  text-shadow: 0 0 10px rgba(181, 145, 255, 0.3);
+  margin-bottom: 10px; /* Extra space below title */
+}
+
+/* Inputs - Sleek, defined, and responsive inputs */
+.auth-input {
+  width: 100%;
+  padding: 15px 18px;
+  border-radius: 14px; /* Matches card corner style */
+  background: rgba(255, 255, 255, 0.08); /* Very subtle transparent background */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Thin light border */
+  color: #F8FAFC; /* Near white text */
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease; /* Better transition for multiple properties */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtle inner shadow for depth */
+}
+
+.auth-input::placeholder {
+  color: #A0AEC0; /* Slightly lighter placeholder */
+}
+
+.auth-input:focus {
+  border-color: #A78BFA; /* Bright focus color (Purple) */
+  background: rgba(255, 255, 255, 0.12);
+  /* Subtle glow on focus */
+  box-shadow: 0 0 0 2px #A78BFA, inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Button - Striking, high-contrast button */
+.auth-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 14px;
+  /* More vibrant, deep gradient (e.g., from deep purple to bright electric blue) */
+  background: linear-gradient(135deg, #7C3AED, #4F46E5);
+  color: white;
+  font-size: 17px;
+  font-weight: 600; /* Bolder text */
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* Box shadow for a lifted look */
+  box-shadow: 0 8px 15px rgba(124, 58, 237, 0.3);
+}
+
+.auth-btn:hover {
+  transform: translateY(-2px); /* Slightly less dramatic lift */
+  opacity: 1; /* Keep opacity at 1, but enhance shadow/brightness */
+  background: linear-gradient(135deg, #8B5CF6, #6366F1); /* Slight change in gradient on hover */
+  box-shadow: 0 10px 20px rgba(124, 58, 237, 0.4); /* Stronger shadow on hover */
+}
+
+/* Subtle Fade Animation - Smoother, deeper entrance */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
