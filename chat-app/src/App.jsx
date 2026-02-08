@@ -6,7 +6,6 @@ import SignUp from './components/SignUp/SignUp'
 import UserHomePage from './components/HomePage/UserHomePage'
 import {Route,Routes} from 'react-router'
 function App() {
- 
 
   return (
     <>
